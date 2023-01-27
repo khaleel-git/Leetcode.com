@@ -1,5 +1,7 @@
 import pygame
 import time
+import random
+
 
 # Initialize pygame
 pygame.init()
@@ -24,6 +26,11 @@ block_size = 10
 
 # Set font for displaying score
 font_style = pygame.font.SysFont(None, 50)
+
+# your score
+def Your_score(score):
+    value = font_style.render("Your Score: " + str(score), True, white)
+    screen.blit(value, [0, 0])
 
 # Initial snake position
 def message(msg,color):
